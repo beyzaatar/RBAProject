@@ -1,0 +1,44 @@
+﻿@model RBAProject.Models.User
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">Details</h1>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive" style="overflow:hidden;">
+                <table class="table">
+                    <tr>
+                        <th> @Html.DisplayNameFor(model => model.Nationalid) </th>
+                        <th> @Html.DisplayNameFor(model => model.Firstname)</th>
+                        <th> @Html.DisplayNameFor(model => model.Lastname)</th>
+                        <th> @Html.DisplayNameFor(model => model.Birthplace)</th>
+                        <th> @Html.DisplayNameFor(model => model.Birthyear)</th>
+                        <th> @Html.DisplayNameFor(model => model.Address)</th>
+                        <th> @Html.DisplayNameFor(model => model.Card)</th>
+                        <th> @Html.DisplayNameFor(model => model.Contact)</th>
+
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(model => model.Nationalid) </td>
+                        <td>@Html.DisplayFor(model => model.Firstname) </td>
+                        <td>@Html.DisplayFor(model => model.Lastname) </td>
+                        <td>@Html.DisplayFor(model => model.Birthplace) </td>
+                        <td>@Html.DisplayFor(model => model.Birthyear) </td>
+                        <td>@Html.DisplayFor(model => model.Address.Id) </td>
+                        <td>@Html.DisplayFor(model => model.Card.Cardnumber) </td>
+                        <td>@Html.DisplayFor(model => model.Contact.Id) </td>
+                    </tr>
+
+                </table>
+                <div style="text-align:right">
+                    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                    <a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

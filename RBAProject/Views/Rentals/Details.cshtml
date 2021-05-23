@@ -1,0 +1,39 @@
+﻿@model RBAProject.Models.Rental
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1 style="text-align:center">Details</h1>
+
+<div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            <div class="table-responsive" style="overflow:hidden;">
+                <table class="table">
+                    <tr>
+                        <th> @Html.DisplayNameFor(model => model.Rentdate) </th>
+                        <th> @Html.DisplayNameFor(model => model.Returndate)</th>
+                        <th> @Html.DisplayNameFor(model => model.Totalprice)</th>
+                        <th> @Html.DisplayNameFor(model => model.Delivery)</th>
+                        <th> @Html.DisplayNameFor(model => model.Car)</th>
+                        <th> @Html.DisplayNameFor(model => model.User)</th>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(model => model.Rentdate) </td>
+                        <td>@Html.DisplayFor(model => model.Returndate) </td>
+                        <td>@Html.DisplayFor(model => model.Totalprice) </td>
+                        <td>@Html.DisplayFor(model => model.Delivery) </td>
+                        <td>@Html.DisplayFor(model => model.Car.Status) </td>
+                        <td>@Html.DisplayFor(model => model.User.Birthplace) </td>
+                    </tr>
+
+                </table>
+                <div style="text-align:right">
+                    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+                    <a asp-action="Index">Back to List</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

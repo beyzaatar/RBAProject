@@ -1,0 +1,91 @@
+﻿@model RBAProject.Models.Email
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 style="color:#66615b">CONTACT</h1>
+
+<h4 style="color:#66615b">Contact Us</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CONTACT US">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="alert alert-info">@TempData["Message"]</div>
+            <div class="form-group">
+                <label style="color:#66615b" asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label style="color:#66615b" asp-for="Mail" class="control-label"></label>
+                <input asp-for="Mail" class="form-control" />
+                <span asp-validation-for="Mail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label style="color:#66615b" asp-for="Subject" class="control-label"></label>
+                <input asp-for="Subject" class="form-control" />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label style="color:#66615b" asp-for="Message" class="control-label"></label>
+                <input asp-for="Message" class="form-control" />
+                <span asp-validation-for="Message" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input style="color:#66615b" type="submit" value="Send..." class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4 col-sm-8 col-xs-12">
+        <div style="margin-right:100px" class="sec-title">
+            <h2 style="color:#66615b">Get in Touch</h2>
+        </div>
+        <br>
+        <div class="default-cinfo">
+
+            <div class="acc-content collapsed">
+                <ul class="contact-infos">
+                    <li>
+                        <div class="icon_box">
+                            <i class="fa fa-map-marker"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <p style="color:#66615b"><b>Address:</b> <br> Rami Yeni, Rami Kışla Cd. No:104, 34055 Eyüpsultan/İstanbul</p>
+                        </div><!-- /.text-box -->
+                    </li>
+                    <li>
+                        <div class="icon_box">
+                            <i class="fa fa-phone"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <p style="color:#66615b"><b>Call Us:</b> <br> +905874698574</p>
+                        </div><!-- /.text-box -->
+                    </li>
+                    <li>
+                        <div class="icon_box">
+                            <i class="fa fa-envelope"></i>
+                        </div><!-- /.icon-box -->
+                        <div class="text-box">
+                            <p style="color:#66615b"><b>Mail Us:</b> <br> beyzaatar50@gmail.com</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="map-section">
+        <div class="map-outer">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d192676.33802091298!2d28.83804748118951!3d41.01283250343581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1senterprise%20rent%20-%20a%20-%20car%20near%20%C4%B0stanbul!5e0!3m2!1str!2str!4v1621772162653!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
